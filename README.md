@@ -2,8 +2,8 @@
 
 ## Learning Goals
 
-* Practice accessing information from APIs and using it to update the DOM
-* Practice listening for user events and updating the DOM in response
+- Practice accessing information from APIs and using it to update the DOM
+- Practice listening for user events and updating the DOM in response
 
 ## Introduction
 
@@ -56,7 +56,7 @@ changes. This can be a color of your choosing.
 
 Once we are able to load _all_ of the dog breeds onto the page, add JavaScript
 so that the user can filter breeds that start with a particular letter using a
-dropdown.
+[dropdown](https://www.w3docs.com/learn-html/html-select-tag.html).
 
 For example, if the user selects 'a' in the dropdown, only show the breeds with
 names that start with the letter a. For simplicity, the dropdown only includes
