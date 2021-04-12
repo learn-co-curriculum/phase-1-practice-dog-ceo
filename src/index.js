@@ -21,9 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
             dogKeys.forEach((breed) => {
                 let newItem = document.createElement('li')
                 newItem.innerText = breed
-                newItem.addEventListener("click",function (event) {
+                newItem.addEventListener("click",function () {
                     newItem.style.color = "blue"
-                 
                 })
                 if (data.message[breed] !== []) {
                     let newSubList = document.createElement('ul')
@@ -32,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         newSubItem.innerText = subBreed
                         newSubList.append(newSubItem)
                         newItem.append(newSubList)
-                        newSubItem.addEventListener("click",function (event) {
+                        newSubItem.addEventListener("click",function (e) {
                             newSubItem.style.color = "blue"
-                        
+                            e.stopPropagation()
                         })
                     })
                 }
@@ -68,9 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     dogKeys.forEach((breed) => {
                         let newItem = document.createElement('li')
                         newItem.innerText = breed
-                        newItem.addEventListener("click",function (event) {
+                        newItem.addEventListener("click",function () {
                             newItem.style.color = "blue"
-                         
                         })
                         if (data.message[breed] !== []) {
                             let newSubList = document.createElement('ul')
@@ -79,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                 newSubItem.innerText = subBreed
                                 newSubList.append(newSubItem)
                                 newItem.append(newSubList)
-                                newSubItem.addEventListener("click",function (event) {
+                                newSubItem.addEventListener("click",function (e) {
                                     newSubItem.style.color = "blue"
-                                
+                                    e.stopPropagation()
                                 })
                             })
                         }
