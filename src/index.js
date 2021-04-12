@@ -46,24 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
             fetch(breedUrl)
                 .then(res => res.json())
                 .then((data) => {
-                    let dogKeys = Object.keys(data.message)
-                    if (dropDown === "a") {
-                        dogKeys = dogKeys.filter(function(dog) {
-                            return dog[0] === "a"
-                        })
-                    } else if (dropDown === "b") {
-                        dogKeys = dogKeys.filter(function(dog) {
-                            return dog[0] === "b"
-                        })
-                    } else if (dropDown === "c") {
-                        dogKeys = dogKeys.filter(function(dog) {
-                            return dog[0] === "c"
-                        })
-                    } else if (dropDown === "d") {
-                        dogKeys = dogKeys.filter(function(dog) {
-                            return dog[0] === "d"
-                        })
-                    }
+                    let dogKeys = Object.keys(data.message).filter(function(dog){
+                        return dog[0] === dropDown
+                    })
                     dogKeys.forEach((breed) => {
                         let newItem = document.createElement('li')
                         newItem.innerText = breed
