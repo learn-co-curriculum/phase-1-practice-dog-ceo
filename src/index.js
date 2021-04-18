@@ -1,7 +1,12 @@
 //console.log('%c HI', 'color: firebrick')
+let dogs;
+
 document.addEventListener('DOMContentLoaded', () => {
-    ceo()
+    ceo(), 
+    breeds(),
+    breedList()
 })
+
 
 function ceo() {
     const imgUrl = "https://dog.ceo/api/breeds/image/random/4" 
@@ -37,7 +42,10 @@ function breeds() {
 }
 
 function breed(dog) {
-     dog.message.forEach(breedList());
+    const doggo = Object.keys(dog.message);
+    dogs = doggo;
+    doggo.forEach(element => breedList(element)) ;
+    //dog.message.forEach(dog => dog.breedList);
    
 }
 
@@ -47,6 +55,28 @@ function breedList(dogBreeds) {
     const li = document.createElement('li')
     li.innerText = dogBreeds
     ul.appendChild(li)
+    
+ul.addEventListener('click', event => {
+    if(event.target.matches('li')) {
+        event.target.style.color = 'blue'
+    }
+})
+
+// the source of my pain
+const dropdownLetter = document.querySelector("#breed-dropdown");
+
+dropdownLetter.addEventListener("change", event => {
+const letter = event.target.value
+const dogsList = dogs.filter((dog) => {
+    return dog.startsWith(letter)
+});
+const ul = document.getElementById("dog-breeds");
+ul.innerHTML = '';
+dogsList.forEach((element) => breedList(element));
+
+})
 }
 
- console.log(breed())
+
+
+
