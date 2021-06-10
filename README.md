@@ -1,4 +1,4 @@
-# Fetch Dog CEO Challenge
+# Additional Practice: Fetch Dog CEO
 
 ## Learning Goals
 
