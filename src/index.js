@@ -30,8 +30,10 @@ let renderDogFactory = (dogs) => {
 
 let renderDogImage = (dog) => { //taking each dog and adding it to its picture and appending to its own div 
     let dogArray = [...dog] //maybe we have to turn it into an array
+    console.log(dogArray) //not working still logging object with array inside
+
     let dogImage = document.createElement('img')
-    dogImage.src = 'dogArray.messages'
+    dogImage.src = 'dogArray.message'
     dogImageCard.append(dogImage)
     dogImageContainer.append(dogImageCard)
 }
