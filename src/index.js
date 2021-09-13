@@ -104,12 +104,20 @@ let renderBreedFactory = (breeds) => {
     
 }
 
+
+////////////DELIVERABLE 4\\\\\\\\\\\
+
 let filterBreedBtFirstLetter = (letter) => {
     console.log('i been clicked')
 
+//if a onclick - render A
+//else b onclick - render B
+//else c onclick - render C
+//else d onclick - render D
+
+
 }
 
-    ///////////DELIVERABLE 4\\\\\\\\\\\
 //if a onclick - render A
 //else b onclick - render B
 //else c onclick - render C
