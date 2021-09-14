@@ -1,4 +1,5 @@
 console.log('%c HI', 'color: firebrick')
+document.addEventListener("DOMContentLoaded",function(){console.log("The DOM has loaded");});
 
 //link variables
 const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
@@ -6,9 +7,11 @@ const breedUrl = 'https://dog.ceo/api/breeds/list/all'
 
 //html variables
 // let dogImageContainer = document.getElementById('dog-image-container')//add dog images here
-let breedDropdownSelector = document.getElementById('breed-dropdown')//add event listener to this
+let breedDropdown = document.getElementById('breed-dropdown')//add event listener to this
+
 // let dogBreedListContainer = document.getElementById('dog-breeds')//add dog breeds here in a list
 let dropdown = document.getElementsByTagName('select')
+
 
 
 //creating new variables
@@ -106,17 +109,22 @@ let renderBreedFactory = (breeds) => {
 
 
 ////////////DELIVERABLE 4\\\\\\\\\\\
+console.log(breedDropdown)
+let handleChange = () => {
+    console.log('ive been changed')
+}
+breedDropdown.addEventListener('Change', handleChange)
 
-let filterBreedBtFirstLetter = (letter) => {
-    console.log('i been clicked')
-
-//if a onclick - render A
+//if a onclick - render A //event.target.value gives you input
 //else b onclick - render B
 //else c onclick - render C
 //else d onclick - render D
 
+//or use breed array and iterate over 
+//.filter breed.startswith(letter) to filter through breed array by first letter
 
-}
+
+
 
 //if a onclick - render A
 //else b onclick - render B
@@ -134,4 +142,3 @@ let filterBreedBtFirstLetter = (letter) => {
 
 //loop over using charat(0) to check the first letter
 
-document.addEventListener("DOMContentLoaded",function(){console.log("The DOM has loaded");});
