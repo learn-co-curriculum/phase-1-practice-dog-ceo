@@ -18,6 +18,7 @@ const breedUrl = 'https://dog.ceo/api/breeds/list/all'
 document.addEventListener('DOMContentLoaded', () => {
     fetch(breedUrl).then(res => res.json()).then(data => addBreedToDOM(data))
     colorChange()
+    dropdownFunction()
 })
 
 function addBreedToDOM(data) {
@@ -48,9 +49,24 @@ function addBreedToDOM(data) {
 
 function colorChange() {
     const dog = document.querySelector(`ul`)
-    console.log(dog)
     dog.addEventListener('click', e => {
         e.target.style.color = "coral"
     })
 }
 
+function dropdownFunction() {
+    const selectDropdown = document.querySelector('#breed-dropdown')
+    selectDropdown.addEventListener('change', e => {
+        const letter = e.target.value
+        const length = document.querySelector('ul').childElementCount
+        console.log(length)
+        for(i = 0; i < length; i++) {
+            const dogsWithLetter = document.querySelectorAll('li')[i].textContent[0]
+            if (dogsWithLetter !== letter) {
+                document.querySelectorAll('li')[i].style.display = 'none'
+            }
+        }
+        
+
+    })
+}
