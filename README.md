@@ -1,4 +1,4 @@
-# Additional Practice: Fetch Dog CEO
+# Fetch Dog CEO
 
 ## Learning Goals
 
