@@ -11,16 +11,21 @@ In this lab, you will write JavaScript to get images of dogs and a list of dog
 breeds from API's and render them to the DOM. You will also add some click
 behavior to the list elements and implement a filter.
 
-> **Note**: this lab does not contain tests. You will be working from the
+Note that this lab **does not contain tests**. You will be working from the
 requirements described below and verifying that your code is working correctly
 in the browser.
+
+Once you're done, be sure to commit and push your code up to GitHub, then submit
+the assignment using CodeGrade. Even though this practice lab does not have
+tests, it must still be submitted through CodeGrade in order to be marked as
+complete in Canvas.
 
 ## Challenge 1
 
 This repository includes an `index.html` file that loads an `index.js` file.
 
 ```js
-const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
+const imgUrl = "https://dog.ceo/api/breeds/image/random/4";
 ```
 
 Add JavaScript that:
@@ -34,7 +39,7 @@ Add JavaScript that:
 ## Challenge 2
 
 ```js
-const breedUrl = 'https://dog.ceo/api/breeds/list/all'
+const breedUrl = "https://dog.ceo/api/breeds/list/all";
 ```
 
 After the first challenge is completed, add JavaScript that:
