@@ -36,6 +36,10 @@ Add JavaScript that:
 
 ---
 
+**Hint:** Recall that you will need to ensure that your JavaScript doesn't run
+until _after_ the HTML has loaded. You can use whichever method you prefer to
+accomplish this.
+
 ## Challenge 2
 
 ```js
